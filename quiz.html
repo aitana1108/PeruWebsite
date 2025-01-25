@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigerian Food Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="quiz-body">
+    <div class="wrapperFirst-page">
+        <main>
+            <div id="loginSection">
+                <h1>Peru Quiz Game</h1>
+                <form id="myForm">
+                    <label for="username">Enter your name:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your name">
+                    <button id="myBtn" type="button">Start Quiz</button>
+                </form>
+            </div>
+            <div id="quizReady" style="display:none;">
+                <p>Are you ready to take the quiz?</p>
+                <button id="yesBtn" type="button">Yes</button>
+                <button id="noBtn" type="button">No</button>
+            </div>
+            <div id="quizQuestion" style="display:none;">
+                <form id="questionForm">
+                    <div id="quizQuestion1">
+                        <h3 class="question-title">Question 1</h3>
+                        <p>When is Peru's Independence Day?</p>
+                        <input type="radio" id="hyperText" name="q1" value="july 28 1821">
+                        <label for="hyperText">July 28, 1821</label><br>
+                        <input type="radio" id="hyperTransfer" name="q1" value="june 28 1821">
+                        <label for="hyperTransfer">June 28, 1821</label><br>
+                        <input type="radio" id="homeTool" name="q1" value="january 28 1821">
+                        <label for="homeTool">January 28, 1821</label><br>
+                    </div>
+                    <div id="quizQuestion2" style="display:none;">
+                        <h3 class="question-title">Question 2</h3>
+                        <img src="images/ceviche (3).jpg" alt="image of ceviche" height="160px" style="border-radius: 15px;">
+                        <p>What is the name of this popular Peruvian dish?</p>
+                        <select id="secondQuestion" name="q2">
+                            <option value="ceviche">Ceviche</option>
+                            <option value="lomo_saltado">Lomo Saltado</option>
+                            <option value="papa_a_la_huancaina">Papa a la Huancaina</option>
+                            <option value="aji_de_gallina">Aji de Gallina</option>
+                        </select>
+                    </div>
+                    <div id="quizQuestion3" style="display:none;">
+                        <h3 class="question-title">Question 3</h3>
+                        <p>Which of the following countries share borders with Peru?</p>
+                        <input type="checkbox" id="ecuador" name="q3" value="Ecuador">
+                        <label for="ecuador">Ecuador</label><br>
+                        <input type="checkbox" id="colombia" name="q3" value="Colombia">
+                        <label for="colombia">Colombia</label><br>
+                        <input type="checkbox" id="uruguay" name="q3" value="Uruguay">
+                        <label for="uruguay">Uruguay</label><br>
+                        <input type="checkbox" id="chile" name="q3" value="Chile">
+                        <label for="chile">Chile</label><br>
+                    </div>
+                    <div id="quizQuestion4" style="display:none;">
+                        <h3 class="question-title">Question 4</h3>
+                        <p>When _ is the last time Peru went to the World Cup?</p>
+                        <input type="text" id="dom" name="q4">
+                    </div>
+                    <div id="quizQuestion5" style="display:none;">
+                        <h3 class="question-title">Question 5</h3>
+                        <p>What is Peruvian currency called?</p>
+                        <input type="radio" id="pesos" name="q5" value="Pesos">
+                        <label for="pesos">Pesos</label><br>
+                        <input type="radio" id="dollar" name="q5" value="Dollar">
+                        <label for="dollar">Dollar</label><br>
+                        <input type="radio" id="soles" name="q5" value="Soles">
+                        <label for="soles">Soles</label><br>
+                    </div>
+                </form>
+                <button id="nextQuestion" type="button">Next</button>
+                <button id="prevQuestion" type="button" style="display:none;">Previous</button>
+            </div>
+            <div id="quizResult" style="display:none;">
+                <h2>Quiz Result</h2>
+                <p id="resultMessage"></p>
+            </div>
+        </main>
+    </div>
+    <footer  class="footer-history">
+            <div class="footer-container">
+                <div class="logoClass">
+                <section class="logo">
+                    <img src="C:/Users/aisha/OneDrive/Desktop/CSW 5/pics/logo-peru.png" alt="Logo">
+                </section>
+                <section class="social-icons">
+                    <a href="https://www.facebook.com/visitperu/"><img src="C:\Users\aisha\OneDrive\Desktop\CSW 5\pics\facbook.PNG" alt="Facebook"></a>
+            <a href="https://www.skype.com/en/international-ca"><img src="C:\Users\aisha\OneDrive\Desktop\CSW 5\pics\skype.PNG" alt="skype"></a>
+            <a href="https://www.instagram.com/peru/"><img src="C:\Users\aisha\OneDrive\Desktop\CSW 5\pics\instagram.PNG" alt="Instagram"></a>
+            <a href="https://www.youtube.com/visitperu"><img src="C:\Users\aisha\OneDrive\Desktop\CSW 5\pics\youtube.PNG" alt="YouTube"></a>
+                </section>
+                </div>
+                <section class="footer-links">
+                    <select id="touristSitesDropdown">
+                        <option value="https://www.peru.travel/en">Peru Official Travel Site</option>
+                        <option value="https://www.machupicchu.gob.pe/">Machu Picchu Official Site</option>
+                        <option value="https://www.limaeasy.com/">Lima Easy Travel Guide</option>
+                    </select>
+                    <button onclick="visitSelectedTouristSite()">Visit Site</button>
+                    <nav>
+                        <a href="#">Cookie Policy</a> | 
+                        <a href="#">Privacy Policy</a> | 
+                        <a href="#">Terms and Conditions</a> | 
+                        <a href="#">Contact Us</a> | 
+                        <a href="#">  About</a>
+                    </nav>
+                </section>
+            </div>
+    </footer>
+    <script src="javascript.js"></script>
+</body>
+</html>

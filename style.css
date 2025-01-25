@@ -1,0 +1,1377 @@
+#masthead-home img {
+    position: absolute;
+    top: 2%; /* Percentage based for better scaling */
+    left: 2%; /* Percentage based for better scaling */
+    z-index: 2;
+}
+
+.navmenu {
+    position: absolute;
+    top: 5%; /* Adjust according to layout, now percentage based */
+    right: 2%; /* Consistent with image positioning */
+    z-index: 3; /* Ensures it stays on top */
+    font-size: 1.5vw; /* Viewport width based font sizing */
+}
+
+@media (max-width: 768px) {
+    .navmenu {
+        font-size: 3vw; /* Larger font size on smaller screens */
+    }
+}
+
+
+#imageShuffle {
+    position: relative;
+    width: 100%;
+    height: 50vh;  /* Adjust height as necessary */
+    background-image: url('images/your-background-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;  /*white text */
+}
+
+#imageShuffle h1 {
+    font-size: 60px; /* Large font size for the header */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    line-height: 1; /* Reduces the height of the line to fit the text closely */
+}
+
+#imageShuffle p {
+    font-size: 20px; /* Appropriate size for subtext */
+    margin: 0; /* Removes all margins to close the gap */
+    padding: 0; /* no padding is adding space */
+    line-height: 1.5; /* text lines are close together */
+}
+
+.navmenu ul {
+    list-style: none; /* Removes default list styling */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Layout items in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    background: transparent; /* no background for the nav */
+}
+
+.navmenu li {
+    margin: 0 10px; /* Adds horizontal spacing between items */
+}
+
+.navmenu a {
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Sets text color to white */
+    font-size: 21px; /* Sets the font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navmenu a:hover {
+    color: red; /* Sets text color to white */
+}
+
+
+
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* Light gray background for better contrast */
+}
+
+main {
+    padding: 20px;
+}
+
+#features {
+    display: flex; /* Flex container for side-by-side layout */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line as needed */
+    justify-content: center; /* Centers items horizontally within the container */
+    gap: 20px; /* Space between the articles */
+}
+article {
+    position: relative; /* Needed for overlay to position correctly */
+    flex: 1; /* Allows articles to grow and fill the space */
+    min-width: 300px; /* Minimum width to ensure usability on smaller screens */
+    background: linear-gradient(145deg, #ff9a9e, #fad0c4); /* Gradient background */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds depth with shadow */
+    padding: 20px; /* Padding inside each article */
+    color: #333; /* Text color */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distributes space inside the article */
+    overflow: hidden; /* Ensure overlay doesn't spill out */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Grey overlay with some transparency */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease;
+}
+
+article:hover .overlay {
+    opacity: 1; /* Visible on hover */
+}
+
+article.history {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+article.tourism {
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+}
+
+article.gastronomy {
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+}
+
+article.about-us {
+    background: linear-gradient(to right, #f4c4f3, #fc67fa);
+}
+
+article.quiz {
+    background: linear-gradient(to right, #42e695, #3bb2b8);
+}
+
+article.developers {
+    background: linear-gradient(to right, #ffd200, #f7971e);
+}
+
+/* Base styles for articles with scaling and subtle grey overlay effect */
+article.history, article.tourism, article.gastronomy,
+article.about-us, article.quiz, article.developers, article.contact {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover effects with a subtle grey overlay and scaling */
+article.history:hover, article.tourism:hover, article.gastronomy:hover,
+article.about-us:hover, article.quiz:hover, article.developers:hover, article.contact:hover {
+    transform: scale(1.05);
+}
+
+
+.home-main {
+    background-color: #000; /* Sets the background color to black for home page main section */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    color: #fff; /* Sets the default text color to white for contrast */
+}
+
+.home-main h2 {
+    color: #EEEEEE; /* Change this to your desired color */
+}
+
+.home-main p {
+    color: #EEEEEE; /* Change this to your desired color */
+}
+
+.home-main a {
+    color: #EEEEEE; /* Change this to your desired color */
+    text-decoration: none; /* Remove underline */
+    position: relative;
+    z-index: 2; /* Ensure the link is above any overlay */
+}
+
+.home-main a:hover {
+    color: #ff0000; /* Hover color */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+.home-main .overlay {
+    position: absolute; /* Positioning overlay absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Example overlay style */
+    z-index: 1; /* it is behind the link */
+    pointer-events: none; /* Making sure it doesn't block clicks */
+}
+
+.home-main article {
+    position: relative; /* positioning context for overlay */
+    overflow: hidden; /* no overflow issues */
+}
+
+
+.image-home img {
+    margin-top: 60px;
+    height: 120px; /* Ensure the image covers the container */
+    width: 100%; /* Ensure the image covers the container */
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+    background-color: #f0f0f0; /* Replace with your desired color */
+}
+
+
+/* Header style */
+
+
+.news-article{
+    background-color: #fff; /* Seting the background color to black for home page main section */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    color: #fff; /* Seting the default text color to white for contrast */
+}
+.news-article h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Gallery container */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /*space between items */
+}
+
+/* Individual gallery items */
+.gallery a {
+    position: relative;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    width: calc(20% - 20px); /* Adjust width to fit 5 items per row */
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.gallery img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 24px; /* Increased font size */
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* adds a shadow for better readability */
+}
+
+/* Hover effect for gallery items */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Hover effect for news items in the news-of-peru section */
+.news-of-peru .news-item:hover {
+    transform: scale(1.05);
+}
+
+/* Change color of h3 elements within news-item to orange */
+.news-of-peru .news-item h3 {
+    color: orange;
+}
+
+
+.news-of-peru P {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.news-item {
+    display: none;
+    flex-basis: 30%;
+    margin-bottom: 20px;
+    padding: 8px;
+    border: 2px solid #ccc;;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a shadow */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #fff;
+}
+
+.news-item a {
+    display: block; /* Make the entire area clickable */
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.news-item a:hover {
+    text-decoration: none; /* Ensure no underline on hover */
+}
+
+.news-item h3:hover {
+    color: #ff0000; /* Hover color */
+    text-decoration: none; /* Ensure no underline on hover */
+}
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.previous, .next {
+    font-size: 24px;
+    background: none;
+    border: 2px solid #333;
+    color: #333;
+}
+
+.previous:hover, .next:hover {
+    background: #333;
+    color: white;
+}
+
+/* button container for proper alignment */
+.buttons-container {
+    text-align: center;
+}
+
+.news-of-peru {
+    background-color: #fff; 
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    color: #000; /*the default text color to white for contrast */
+}
+
+#headerBackground {
+    width: 100%;
+    height: 50vh; /* Adjusting height*/
+    background-image: url('images/jamie-davies-nNKz-7mY8QI-unsplash.jpg');
+    background-size: cover; /* Ensuring the background image covers the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;  
+}
+
+#headerBackground h1 {
+    font-size: 60px; /* Large font size for the header */
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    line-height: 1; /* Reducing the height of the line to fit the text closely */
+}
+
+#headerBackground-history {
+    width: 100%;
+    height: 50vh; /* Adjusting height*/
+    background-image: url('images/moche route (1).jpg');
+    background-size: cover; /* Ensuring the background image covers the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;  
+}
+
+#headerBackground-history h1 {
+    font-size: 60px; /* Large font size for the header */
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    line-height: 1; /* Reducing the height of the line to fit the text closely */
+}
+
+
+#headerBackground-devdev {
+    width: 100%;
+    height: 50vh; /* Adjusting height*/
+    background-image: url('images/dev-back.avif');
+    background-size: cover; /* Ensuring the background image covers the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;  
+}
+
+#headerBackground-devdev h1 {
+    font-size: 60px; /* Large font size for the header */
+    margin: 0; /* Removing default margin */
+    padding: 0; /* Removing default padding */
+    line-height: 1; /* Reducing the height of the line to fit the text closely */
+}
+
+.tourism-main {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.tourism-main section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tourism-main section img {
+    width: 600px;  
+    height: 450px; 
+    object-fit: cover; 
+}
+
+
+.tourism-main h2 {
+    color: lightgreen;
+    transition: transform 0.3s ease, zoom 0.3s ease; /* Smooth transition for both transform and zoom */
+    cursor: pointer; /* Changing the cursor to a pointer to indicate interactivity */
+    position: relative; /* Ensuring the zoom only affects the h2 element */
+    display: inline-block; /* Helps to better isolate the h2 element */
+}
+
+.tourism-main h2 + p {
+    margin-top: 0;
+}
+
+.tourism-main h2:hover {
+    zoom: 1.2; /* Zooming the h2 element */
+}
+
+#discover-wonders, #what-to-do, #plan-your-trip {
+    flex-direction: row;
+}
+
+#what-to-see, #travel-essentials, #getting-around {
+    flex-direction: row-reverse;
+}
+
+.tourism-main section h2, .tourism-main section p {
+    flex: 1 1 50%; /* Text takes up half the width */
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .tourism-main section {
+        flex-direction: column !important; /* Overrides any row settings for mobile */
+    }
+
+    .tourism-main section img {
+        width: 100%;  /* Full width on small screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .tourism-main section h2, .tourism-main section p {
+        flex-basis: 100%; /* Stacks text elements full width on small screens */
+        padding: 5px;
+    }
+}
+
+
+main.tourism-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tourism-main img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.tourism-main img.visible {
+    opacity: 1;
+}
+
+
+/*About us */
+#masthead-3{
+    width: 100%;
+    height: 50vh; 
+    background-image: url(images/peruhome5.jpeg); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url('images/peruhome5.jpeg');
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat; 
+}
+
+
+ body {
+    background-color: #fff; 
+    color: #000;  
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper-wrapper-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 303px;
+}
+
+.introduction, .purpose, .values, .footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.introduction h2, .purpose h3, .values h3 {
+    color: #333;
+    text-align: center;
+}
+
+.introduction p, .purpose p, .values p, .footer p {
+    color: #333;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.values-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.value {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.value h4 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.value p {
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.value img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+
+
+.main, .aside, .footer {
+    position: relative;
+    z-index: 0; 
+}
+
+#logo-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+}
+
+
+#logo-2 img {
+    width: 100%;
+    height: 100px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    display: block;
+    object-fit: cover;
+}
+
+/contact us/
+.headerBackground{
+    width: 100%;
+    height: 50vh; 
+}
+.form-box {
+    background-color: #f9f9f9;
+    padding: 40px;  
+    border-radius: 8px;  
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);  
+    margin: 100px auto;
+    width: 95%;  
+    max-width: 700px; 
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;  
+    gap: 10px;  
+}
+
+.contact-form label {
+    font-weight: bold;  
+    margin-bottom: 5px;  
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;  
+    padding: 8px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+.contact-form button {
+    background-color: #0056b3; 
+    color: white; 
+    padding: 10px 15px;  
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+.contact-form button:hover {
+    background-color: #003d7a; 
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 500px;
+}
+
+.close-button {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: red;
+    text-decoration: none;
+}
+
+#masthead-2{
+    background-image: url(images/photo-1507679799987-c73779587ccf.avif);
+    background-size: cover; /* Ensures the background image covers the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    width: 100%;
+    height: 50vh; /* Adjust height as necessary */
+    
+}
+
+.navigation ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-right: 20px;}
+
+.navigation a {
+    text-decoration: none; 
+    color: black; 
+    font-size: 16px; 
+}
+
+/* contact us*/
+
+
+/* Style for the header */
+#masthead {
+    width: 100%;
+    height: 50vh; /* Adjust height as necessary */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url('images/fabrizio-magoni-boaDpmC-_Xo-unsplash.jpg');
+    background-size: cover; /* Ensures the background image covers the entire element */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+}
+
+
+
+/* Style for the logo container */
+.logo-container {
+    margin-right: auto; 
+}
+
+/* Style for the logo */
+.logo-container img {
+    height: 40px;
+   
+}
+.navmenu {
+    position: absolute; 
+    top: 30px; 
+    right: 20px; 
+}
+
+.navmenu ul {
+    list-style: none; /* Removes default list styling */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Layout items in a row */
+    align-items: center; /* Center items vertically */
+}
+
+.navmenu li {
+    margin: 0 10px; /* Adds horizontal spacing between items */
+}
+
+.navmenu a {
+    text-decoration: none; 
+    color: white;
+    font-size: 21px; 
+    transition: color 0.3s; 
+}
+
+.navmenu a:hover {
+    color: red; 
+}
+
+
+.transparent-logo {
+    background: none;
+    width: 100px;  
+    height: 60px;  
+    border: none; 
+}
+
+.dish, .drink, .dessert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+
+.dish img, .drink img, .dessert img {
+    width: 50%;
+    height: auto;
+    margin: 0 20px;
+}
+
+
+.dish section, .drink section, .dessert section {
+    flex: 1;
+    padding: 20px;
+}
+
+
+.right {
+    flex-direction: row-reverse;
+}
+
+.left {
+    flex-direction: row-reverse;
+}
+
+.restaurants-grid {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-gap: 15px;
+    margin: 40px 0; }
+
+.restaurant {
+    background: #fff; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    text-align: center; 
+    padding: 20px; 
+}
+
+.restaurant img {
+    width: 100%; 
+    height: auto;
+    margin-bottom: 10px; 
+}
+
+.restaurant a {
+    display: block; 
+}
+
+
+/* General image styling */
+#gas-image img {
+    width: 100%; /* Adjust the width as needed, or use max-width for responsiveness */
+    height: auto; 
+    margin: 20px 0; /* Adds vertical space around images */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    border: 1px solid #ccc;
+    padding: 8px; /* Padding around the image within the border */
+    background-color: white; 
+}
+
+
+.special-image-style {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+    padding: 8px;
+    background-color: white;
+    margin: 20px 0; 
+}
+
+
+#logo-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+}
+
+
+#logo-2 img {
+    width: 100%;
+    height: 100px;
+    border: none;
+    background: none;
+    box-shadow: none;
+    display: block;
+    object-fit: cover;
+}
+
+.background-image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*quiz*/
+#quiz-body {
+    flex: 1; /* Allows the quiz body to expand and fill available space, pushing the footer down */
+    display: flex; /* Enables flexbox for quiz body to manage its children */
+    flex-direction: column; /* Aligns children of the quiz body vertically */
+    min-height: 0; /* Fixes flexbox bug in some browsers that improperly calculate heights */
+}
+.wrapperFirst-page {
+    position: relative; /* Use relative for better flow control */
+    top: 0; /* Align top to the parent container */
+    left: 0; /* Align left to the parent container */
+    transform: translate(0, 0); /* No need to center using transform if it causes issues */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Maintain minimum height to viewport height */
+    width: 100%; /* Use 100% width for full container width */
+    background: url('images/inca architecture (machu picchu).jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* The form box with a neon blue gradient border */
+#myForm {
+    text-align: center; 
+    border-radius: 8px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    width: fit-content; 
+    background: linear-gradient(to right, rgba(240, 240, 240, 0.5), rgba(212, 212, 212, 0.5), rgba(240, 240, 240, 0.5)); /* Light grey gradient with low opacity */
+    backdrop-filter: blur(5px); 
+    
+    /* A neon blue gradient border */
+    position: relative; 
+    box-shadow: 0 0 8px #00BFFF, 
+                0 0 10px #1E90FF, 
+                0 0 12px #00FFFF; 
+    outline: 1px solid transparent; /* Helps maintain the form's shape */
+}
+
+#welcomeMessage {
+    color: white; /*text color */
+    text-shadow:
+        0 0 5px rgba(109, 119, 140, 0.5), 
+        0 0 7px rgba(49, 73, 94, 0.5), 
+        0 0 9px rgba(193, 154, 107, 0.5); 
+    font-size: 19px; /*font size */
+}
+
+/* For all buttons */
+button {
+    background-color: #367588; 
+    color: white;
+    border: none;
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    margin: 5px; 
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+button:hover {
+    background-color: #004242; 
+}
+
+/* Each question container */
+#quizQuestion div {
+    background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* Gradient background for the question box */
+    border-radius: 15px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin: auto; 
+    padding: 20px; 
+    text-align: center; 
+    width: 500px; 
+    height: 300px; 
+    position: relative; /* Ensuring the container stays in place */
+}
+
+#quizReady {
+    background: linear-gradient(to right, rgba(207, 222, 243, 0.8), rgba(224, 234, 252, 0.8)); /* Gradient background with light opacity */
+    border-radius: 15px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    margin: 20px auto; 
+    width: fit-content; 
+    text-align: center; 
+}
+
+#quizQuestion p {
+    font-size: 1em;
+    color: #333;
+    max-height: 100px; 
+    overflow: auto; /* allows scrolling if the text is too much */
+}
+
+/* For input fields for radio buttons and checkboxes */
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #367588; 
+}
+
+/* Styling the labels related to radio buttons and checkboxes */
+label[for="hyperText"], label[for="hyperTransfer"], label[for="homeTool"], 
+label[for="div"], label[for="span"], label[for="body"], label[for="style"] {
+    display: inline-block; /* Options showning side by side */
+    background-color: #eef2f7; 
+    border: 1px solid #cdd8e3; 
+    border-radius: 15px; 
+    padding: 10px 20px; 
+    margin: 8px; 
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    text-align: center; /* Center text within the label */
+    min-width: 100px; 
+}
+
+/* Styling the labels related to radio buttons for Question 7 */
+label[for="html"], label[for="python"], label[for="java"] {
+    display: inline-block; /* Options shown side by side */
+    background-color: #eef2f7; 
+    border: 1px solid #cdd8e3; 
+    border-radius: 15px; 
+    padding: 10px 20px; 
+    margin: 8px; 
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    text-align: center; /* Center text within the label */
+    min-width: 100px; 
+}
+
+/* Styling the labels related to radio buttons for Question 5 */
+label[for="selectorHierarchy"], label[for="propertyPriority"], label[for="styleApplication"] {
+    display: inline-block; /* Options shown side by side */
+    background-color: #eef2f7; 
+    border: 1px solid #cdd8e3; 
+    border-radius: 15px; 
+    padding: 10px 20px; 
+    margin: 8px; 
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    text-align: center; /* Center text within the label */
+    min-width: 100px; 
+}
+
+/* Styling the labels related to checkboxes for Question 8 */
+label[for="htmlTech"], label[for="cssTech"], label[for="jsTech"], label[for="sqlTech"] {
+    display: inline-block; /* Options shown side by side */
+    background-color: #eef2f7; 
+    border: 1px solid #cdd8e3; 
+    border-radius: 15px; 
+    padding: 10px 20px; 
+    margin: 8px; 
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    text-align: center; /* Center text within the label */
+    min-width: 100px; 
+}
+
+label:hover {
+    background-color: #dce4ec; 
+}
+
+/* Styling 'Next' and 'Previous' buttons */
+#nextQuestion, #prevQuestion {
+    background-color: #004242; 
+    color: white; /* White text for readability */
+    font-weight: bold; 
+    font-size: 0.9em;
+    letter-spacing: 1px; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 15px; /* Rounded corners to match other elements */
+    display: block; 
+    width: fit-content; /* Adjust width to content */
+    margin: 20px auto; 
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+#nextQuestion:hover, #prevQuestion:hover {
+    background-color: #367588;
+}
+/* Ensuring that other input and select elements are also styled */
+input[type="text"], select {
+    border: 1px solid #cdd8e3;
+    border-radius: 15px;
+    padding: 10px;
+    width: calc(100% - 22px); /* Account for padding and border */
+    box-sizing: border-box;
+    margin-top: 5px; 
+    background-color: #eef2f7; /* Background color to match the overall theme */
+}
+
+#myForm input[type="text"] {
+    margin-top: 0; 
+}
+
+
+
+
+footer {
+    position: relative;  /* or 'static', which is default if not specified */
+    width: 100%;
+    background-color: #333;
+    color: white;
+    
+}
+
+.footer-history {
+    color: white;
+    padding: 20px 0;
+    display: flex;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;  /* Centers the footer container */
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Adjusted for better content distribution */
+    align-items: center;
+    color: rgb(91, 89, 89);
+    padding-left: 50px;
+    padding-top: 10px;
+    gap: 20px;
+    background-color: #333;  /* Ensure background color fills the footer */
+}
+
+.logoClass {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.social-icons img {
+    width: 25px;
+    margin: 0 10px;
+}
+
+.logo img, .social-icons a img {
+    height: 30px;
+    margin-right: 12px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+}
+
+.footer-links select, .footer-links button {
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+.footer-links button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.footer-links button:hover {
+    background-color: #45a049;
+}
+
+.footer-links nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+}
+
+.footer-links nav a:hover {
+    text-decoration: underline;
+}
+
+
+//history page 
+.header {
+    display: flex;
+    justify-content: space-between; /* Aligns items to the space between the logo and nav */
+    align-items: center; /* Centers items vertically */
+    padding: 10px 20px; /* Adds padding around the items */
+}
+.header .logo {
+    margin-right: auto; /* Pushes the navigation to the far right */
+}
+.centered-text {
+    position: absolute; /* Positions the text over the image */
+    top: 50%; /* Centers the text vertically */
+    left: 50%; /* Centers the text horizontally */
+    transform: translate(-50%, -50%); /* Adjusts the positioning to be truly centered */
+    font-size: 24px; /* Adjust font size as needed */
+    color: white; /* Text color */
+    font-weight: bold; /* Makes the text bold */
+}
+
+.navmenu {
+    position: absolute;
+    top: 70px; /* Adjust according to your layout */
+    right: 20px; /* Adjust as necessary */
+    z-index: 2; /* Higher z-index to appear above the shuffle image */
+    font-size: 24px;
+}
+.navmenu ul {
+    list-style: none; /* Removes default list styling */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    display: flex; /* Layout items in a row */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    background: transparent; /* Ensures no background for the nav */
+}
+.navmenu li {
+    margin: 0 10px; /* Adds horizontal spacing between items */
+}
+
+.navmenu a {
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Sets text color to white */
+    font-size: 21px; /* Sets the font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.image-container img {
+    padding-top:-200px;
+    height: 100px; /* Ensure the image covers the container */
+    width: 100%; /* Ensure the image covers the container */
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+    background-color: #f0f0f0; /* Replace with your desired color */
+}/* Header style */
+.navmenu a:hover {
+    color: red; /* Sets text color to white */
+}
+.img_section {
+    
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.fixedWideImage {
+    width: 100%;        /* Takes full width of the container */
+    height: auto;       /* Maintains the aspect ratio */
+    max-height: 500px;  /* Maximum height to ensure it's not too long */
+    object-fit: cover;  /* Covers the area of the element without stretching the image */
+}
+.main_history {
+    position: relative;
+    background: white;   
+    z-index: 1;          /* Ensures the content stays on top if needed, though may not be necessary */
+    padding-bottom: 80px;
+}
+.One{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.Two{
+        display:flex;
+        flex-direction: row;
+        justify-content:flex-start;
+        align-items: center;
+        gap: 10px;
+    
+}
+.container{
+    width:80%;
+    margin:0 auto;
+}
+.container h1 , h3{
+    border-bottom: 1px solid #ccc;
+}
+.text_container {
+    position: absolute; 
+    top:25%; 
+    left: 0;
+    color:white; 
+    padding-top: 30px;
+    padding-left: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+.image-container img {
+    width: 100%;           /* Full width of the container */
+    height: 280px;         /* Height for second and third images */
+    object-fit: cover;     /* Ensures images cover the area without distorting */
+    border-radius: 15px;   /* Rounded corners */
+    display: none;         /* Hide all images initially */
+}
+
+.image-container img:first-child,
+.image-container img:last-child {
+    height: 400px;         /* Different height for the first and fourth images */
+}
+
+.image-container img:first-child {
+    display: block;        /* Show only the first image initially */
+}
+.image-gallery {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+}
+
+.image-gallery .prev, .image-gallery .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+}
+
+.image-gallery .prev {
+    left: 0;
+}
+
+.image-gallery .next {
+    right: 0;
+}
+
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+}
+
+.slide {
+    display: none; /* All slides hidden by default */
+    width: 100%; /* Full width of the container */
+    border-radius: 15px; /* Rounded corners */
+}
+
+.slideshow-container .slide.active {
+    display: block; /* Only the active slide is shown */
+}
+
+
+#quizResult h2, #quizResult p {
+    color: white; /* Sets the text color to white */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.6), 
+                 0 0 30px rgba(255, 255, 255, 0.4),
+                 0 0 40px white; /* Multi-layer glow effect */
+}
+
+#quizResult {
+    background-color: #367588; 
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.developers h2{
+    border-bottom: 1px solid #ccc;
+}
+
+

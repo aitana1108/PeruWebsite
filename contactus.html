@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomy of Peru</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper wrapper-4">
+        
+        <header id="masthead-2">
+            <a href="home.html">
+                <img src="images/peru-log.png" alt="logo" class="transparent-logo">
+            </a>
+            
+            <div id="background-header"></div>
+            <nav class="navmenu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="Tourism.html">Tourism</a></li>
+                    <li><a href="gastronamy.html">Gastronomy</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="developer.html ">About The Developers</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="logo-2">
+            <img src="images/styleperu (1).jpeg" alt="Descriptive Alt Text">
+        </section>
+   
+        <div class="form-box">
+            <h1>Contact Us</h1>
+
+            <h2>We'd Love to Hear From You!</h2>
+            <form class="contact-form" action="submit_form.php" method="POST" onsubmit="return handleSubmit();">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+        
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+        
+                <button type="submit">Send Feedback</button>
+            </form>
+            <p id="feedbackMessage" style="display: none;"></p>
+
+        </div>
+       <!-- Modal Structure -->
+<!-- Modal Structure -->
+<div id="modalPrompt" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close-button">×</span>
+        <p>If you have any questions, feedback, or would like to share your travel stories, please fill out the form below and we'll get back to you as soon as possible.</p>
+    </div>
+</div>
+<footer>
+    <div class="footer-history">
+        <div class="footer-container">
+            <div class="logoClass">
+            <section class="logo">
+                <img src="images/logo-peru.png" alt="Logo">
+            </section>
+            <section class="social-icons">
+                <a href="https://www.facebook.com/visitperu/"><img src="images/facbook.PNG" alt="Facebook"></a>
+        <a href="https://www.skype.com/en/international-ca"><img src="images/skype.PNG" alt="skype"></a>
+        <a href="https://www.instagram.com/peru/"><img src="images/instagram (1).PNG" alt="Instagram"></a>
+        <a href="https://www.youtube.com/visitperu"><img src="images/youtube.PNG" alt="YouTube"></a>
+            </section>
+            </div>
+            <section class="footer-links">
+                <select id="touristSitesDropdown">
+                    <option value="https://www.peru.travel/en">Peru Official Travel Site</option>
+                    <option value="https://www.machupicchu.gob.pe/">Machu Picchu Official Site</option>
+                    <option value="https://www.limaeasy.com/">Lima Easy Travel Guide</option>
+                </select>
+                <button onclick="visitSelectedTouristSite()">Visit Site</button>
+                <nav>
+                    <a href="#">Cookie Policy</a> | 
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms and Conditions</a> | 
+                    <a href="#">Contact Us</a> | 
+                    <a href="#">  About</a>
+                </nav>
+            </section>
+        </div>
+    </div>
+</footer>
+</div>
+<script src="javascript.js"></script>
+</body>
+</html>
